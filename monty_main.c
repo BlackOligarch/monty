@@ -2,9 +2,9 @@
 stack_t *head = NULL;
 
 /**
- * main - entry point
- * @argc: arguments count
- * @argv: list of arguments
+ * main - the entry point of the program
+ * @argc: the arguments count
+ * @argv: the list of arguments
  * Return: always 0
  */
 
@@ -66,18 +66,24 @@ void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
 
-	if (new_node == NULL || *new_node == NULL)
-		exit(EXIT_FAILURE);
-	if (head == NULL)
+	if (new_node == NULL)
 	{
-		head = *new_node;
-		return;
+		exit(EXIT_FAILURE);
 	}
-	tmp = head;
-	while (tmp->next != NULL)
-		tmp = tmp->next;
+	else
+	{
+		if (head == NULL)
+		{
+			head = *new_node;
+		}
+		else
+		{
+			tmp = head;
+			while (tmp->next != NULL)
+				tmp = tmp->next;
 
-	tmp->next = *new_node;
-	(*new_node)->prev = tmp;
-
+			tmp->next = *new_node;
+			(*new_node)->prev = tmp;
+		}
+	}
 }
