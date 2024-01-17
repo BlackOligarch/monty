@@ -131,10 +131,9 @@ void find_func(char *opcode, char *value, int ln, int format)
 void call_fun(op_func func, char *op, char *val, int ln, int format)
 {
 	stack_t *node;
-	int flag;
-	int i;
+	int flag = 1;
+	int i = 0;
 
-	flag = 1;
 	if (strcmp(op, "push") == 0)
 	{
 		if (val != NULL && val[0] == '-')
