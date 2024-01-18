@@ -1,4 +1,5 @@
 #include "monty.h"
+/* GLOBAL VARIABLE */
 stack_t *head = NULL;
 
 /**
@@ -58,11 +59,11 @@ void free_nodes(void)
 
 
 /**
- * add_to_queue - Adds a node to the queue.
+ * add_2_queue - Adds a node to the queue.
  * @new_node: Pointer to the new node.
  * @ln: line number of the opcode.
  */
-void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
+void add_2_queue(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
 
