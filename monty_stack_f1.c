@@ -6,7 +6,7 @@
  * @new_node: The pointer to the new node.
  * @ln: The integer representing the line number of of the opcode.
  */
-void add_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
+void add_2_stack(stack_t **new_node, __attribute__((unused))unsigned int ln)
 {
 	stack_t *tmp;
 
