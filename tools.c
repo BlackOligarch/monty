@@ -84,7 +84,7 @@ void search_func(char *opcode, char *value, int ln, int fmt)
 	int i, flag;
 
 	instruction_t func_list[] = {
-		{"push", add_to_stack},
+		{"push", add_2_stack},
 		{"pall", print_stack},
 		{"pint", print_top},
 		{"pop", pop_top},
@@ -157,7 +157,7 @@ void call_fun(op_func func, char *op, char *val, int ln, int fmt)
 				func(&node, ln);
 				break;
 				case 1:
-				add_to_queue(&node, ln);
+				add_2_queue(&node, ln);
 				break;
 				}
 				break;
